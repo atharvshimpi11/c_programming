@@ -1,5 +1,8 @@
 # c_programming
 Learing C programming at university and tried to implement them 
+
+
+
 // C program for the above approach
 #include <math.h>
 #include <stdio.h>
@@ -46,6 +49,8 @@ int game(char you, char computer)
     // Default return for invalid/unsupported input
     return 0;
 }
+
+
 
 // Driver Code
 int main()
