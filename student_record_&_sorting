@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<string.h>
+struct  student {
+    int id;
+    char name[50];
+    char add[100];
+    float cgpa;
+};
+int main()
+{
+    int n, count=0;
+    printf("enter the number of students: ");
+    scanf("%d",&n);
+        struct student s[n];
+    printf("enter details of %d students: \n",n );
+    for(int i=0;i<n;i++)
+    {
+            printf("enter student id:");
+            scanf("%d",&s[i].id);
+            printf("enter student name:");
+            scanf("%s",s[i].name);
+            printf("enter student address:");
+            scanf("%s",s[i].add);
+            printf("enter student CGPA:");
+            scanf("%f",&s[i].cgpa);
+    }
+    for(int i =0; i<n; i++)
+    { if (s[i].cgpa>7.0 && (strcmp(s[i].add,"mumbai")==0) && s[i].cgpa<10.0)
+        {
+           printf("------details of student with CGPA greater than 7.0 and address mumbai:------- \n");
+             printf("student id: %d\n",s[i].id);
+              printf("student name: %s\n",s[i].name);
+             printf("student address: %s\n",s[i].add);
+             printf("student CGPA: %.2f\n",s[i].cgpa);  
+             count++; 
+        }
+    
+    
+    }
+    if(count==0)
+    {
+        printf("no student found with CGPA greater than 7.0 and address mumbai\n");
+    }
+  return 0;
+}
